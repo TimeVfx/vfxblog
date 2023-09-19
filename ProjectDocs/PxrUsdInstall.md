@@ -5,7 +5,8 @@ pxr usd 的安装可以自己下载源码编译，也可以使用Nvidia编译好
 
 ## USD Manager 工具安装
 
-下载地址 https://github.com/dreamworksanimation/usdmanager
+> [!NOTE]
+> 下载地址 https://github.com/dreamworksanimation/usdmanager
 
 - 将pxr usd安装包中/scripts/set_usd_env.bat拷贝一份到 usd manager根目录中
 
