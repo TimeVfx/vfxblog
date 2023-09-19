@@ -1,1 +1,2 @@
-# vfxblog
+# VFXBill Blog
+##### VFX Guide
