@@ -2,7 +2,7 @@
 
 ## VFXBill
 
-- 互联网是有记忆的，我想留下一些成长的脚印。
+- 纸上得来终觉浅，绝知此事要躬行。
 
 
 [GitHub](https://github.com/TimeVfx/vfxblog)
