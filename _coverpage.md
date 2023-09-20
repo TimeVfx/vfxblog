@@ -5,7 +5,7 @@
 - 纸上得来终觉浅，绝知此事要躬行。
 
 
-[GitHub](https://github.com/TimeVfx/vfxblog)
+[GitHub](https://github.com/TimeVfx)
 [开始阅读](README.md)
 
 

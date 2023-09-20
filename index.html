@@ -9,14 +9,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <!-- 网站页签图标 -->
   <link rel="shortcut icon" href="blog.svg" type="image/x-icon" />
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+
+  <!-- custom stylesheet -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <link rel="stylesheet" href="//unpkg.com/docsify-accordion/src/style.css">
 </head>
 
 <body>
   <div id="app">Loading......</div>
   <script>
     window.$docsify = {
-      name: 'VFXBill', // 左侧侧边栏最顶部的文字
-      repo: 'https://github.com/TimeVfx/vfxblog', // 右上角的挂件（跳转链接）
+      name: '', // 左侧侧边栏最顶部的文字
+      repo: 'https://github.com/TimeVfx', // 右上角的挂件（跳转链接）
       el: '#app', // 欢迎页
       coverpage: true, // 开启封面功能
       loadSidebar: true, // 开启侧边栏功能
@@ -26,6 +32,7 @@
       mergeNavbar: true,  // 小屏设备下合并导航栏到侧边栏
       auto2top: true, // 切换页面后是否自动跳转到页面顶部
       onlyCover: true, // 让封面单独出现，封面滑动在移动端效果并不好，所有固定onlyCover为true
+      themeColor: "#42b983",
       // search.min.js插件
       search: {
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
@@ -43,33 +50,80 @@
         tabComments: true,
         tabHeadings: true
       },
+      //docsify-pagination.main.js插件
+      pagination: {
+        previousText: '上一章节',
+        nextText: {
+          '/en/': 'NEXT',
+          '/': '下一章节'
+        },
+        crossChapter: true,
+        crossChapterText: false,
+      },
+      //flexible-alerts插件
       'flexible-alerts': {
       style: 'flat'
-    }
-    }
-    // 离线也能查看
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('sw.js')
+      },
+      //footer-enh.min.js插件
+      footer: {
+      copy: '<span>&copy; 2023</span>',
+      auth: 'by Nick',
+      pre: '<hr/>',
+      style: 'text-align: right;',
+      class: 'className',
+      },
+      //sidebar-collapse.min.js插件
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+      },
+      subMaxLevel: 3,
+      sidebarDisplayLevel: 1, // set sidebar display level
+      //time-updater.js插件
+      timeUpdater: {
+      text: "<div align='right'>last update time: {docsify-updated}</div>",
+      formatUpdated: "{YYYY}/{MM}/{DD}",
+      whereToPlace: "bottom",
+      },
     }
   </script>
+  <style type="text/css">
+    .content {
+      overflow: auto;
+  }
+  </style>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- 解析xxx类型的code展示面板，至于样式还是得自己加 -->
-  <script src=" //cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-jsx.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+
+  <!-- plugins -->
   <!-- 全文搜索 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <!-- 代码复制 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- 底部分页 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 页面底部前/后一章 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 页面左右分割 -->
+  <script src="//unpkg.com/docsify-slides/dist/docsify-slides.min.js"></script>
+  <!-- 代码拷贝 -->
+  <script src="https://unpkg.com/docsify-copy-code@3"></script>
   <!-- 标签展示 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- 警告样式 -->
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <!-- 页脚 -->
+  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+  <!-- select -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-select@1"></script>
+  <!-- 添加空格 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
+  <!-- 侧边栏折叠 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- 内部链接 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-wikilink@1"></script>
+  <!-- 折叠栏 -->
+  <script src="//unpkg.com/docsify-accordion/src/index.js"></script>
+  <!-- 终端代码 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-terminal-block@1.0.3"></script>
   <!-- 语法高亮 -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  <!-- theme-liawn主题 //cdn.jsdelivr.net/gh/用户名/仓库名@版本/文件夹/文件名 -->
-  <script src="//cdn.jsdelivr.net/gh/liawnliu/docsify-theme-liawn@v1.2.0/dist/theme-liawn.min.js"></script>
-  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <!-- 更新时间 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.js"></script>
 </body>
 </html>
