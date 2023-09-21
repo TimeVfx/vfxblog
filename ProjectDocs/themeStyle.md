@@ -66,8 +66,14 @@ warning|npm run build
 https://angry-swanson-b4e47b.netlify.app/language-highlight
 
 https://prismjs.com/#supported-languages
-  * //cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js
-  * //cdn.jsdelivr.net/npm/prismjs@1/components/prism-batch.min.js
+* //cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js
+* //cdn.jsdelivr.net/npm/prismjs@1/components/prism-batch.min.js
+* //cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js
+* //cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js
+* //cdn.jsdelivr.net/npm/prismjs@1/components/prism-git.min.js
+* //cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js
+* //cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js
+* //cdn.jsdelivr.net/npm/prismjs@1/components/prism-cmake.min.js
 
 ## 左右分屏 https://cdn.jsdelivr.net/npm/docsify-tabs@1
 <!-- panels:start -->
