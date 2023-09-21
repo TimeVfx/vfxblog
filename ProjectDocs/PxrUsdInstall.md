@@ -12,7 +12,7 @@ pxr usd 的安装可以自己下载源码编译，也可以使用Nvidia编译好
 
 修改bat中的内容
 
-``` shell
+``` batch
 @echo off
 pushd %~dp0
 set USD_INSTALL_DIR=D:/usd.py310.windows
@@ -41,7 +41,7 @@ exit /b
 - 然后在usd manager根目录创建一个 UsdManager.bat的启动脚本
 
 
-``` shell
+``` batch
 @echo off
 setlocal
 call "%~dp0set_usd_env.bat"
