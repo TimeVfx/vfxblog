@@ -7,3 +7,6 @@
 
 [视频自动翻译配音](https://github.com/jianchang512/pyvideotrans)
 - 语言自动翻译 并可以自动生成配音
+
+[截图工具](https://pixpinapp.com/)
+- 类似Snipaste的截图工具,功能更多

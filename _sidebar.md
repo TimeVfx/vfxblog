@@ -1,5 +1,9 @@
 * Houdini
   * [How to use Python in houdini](/ProjectDocs/houdiniUsePython.md)
+  * [Node Guide](/ProjectDocs/nodeGuide/nodeGuide.md)
+    * [TopoBuild](/ProjectDocs/nodeGuide/topBuild.md)
+* VScode
+  * [Configuring houdini development environment](/ProjectDocs/vscode/houdiniConfig.md)
 * Pxr Usd
   * [Pxr Usd 安装](/ProjectDocs/PxrUsdInstall.md)
 * Third Party Tools
